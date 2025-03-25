@@ -35,9 +35,14 @@ return [
     |
     */
 
+    // COMMENT: Use 'passport' for API authentication guard
     'guards' => [
         'web' => [
             'driver' => 'session',
+            'provider' => 'users',
+        ],
+        'api' => [
+            'driver' => 'passport',
             'provider' => 'users',
         ],
     ],
